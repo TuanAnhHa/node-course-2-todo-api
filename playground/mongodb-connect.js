@@ -32,7 +32,5 @@ MongoClient.connect(url, (err, db) => {
     //     console.log(JSON.stringify(result.ops[0]._id.getTimestamp()));
     // });
 
-
-
     db.close();
 });
