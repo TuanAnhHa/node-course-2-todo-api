@@ -7,15 +7,15 @@ var { User }     = require('./models/user');
 
 var app          = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // middleware
 
 app.post('/todos', (req, res) => {
     // console.log(req.body);
     var todo = new Todo ({
-        text: req.body.text
+        text: req.body.text // get data from the users
     });
 
-    todo.save().then((doc) => {
+    todo.save().then((doc) => { // save the data
         res.send(doc);
     }, (e) => {
         res.status(400).send(e);
@@ -25,3 +25,7 @@ app.post('/todos', (req, res) => {
 app.listen(3000, () => {
     console.log('Starting on port 3000...');
 });
+
+module.exports = {
+    app
+}

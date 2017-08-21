@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'); // add the mongoose library
 
 var User = mongoose.model('User', {
     email: {
