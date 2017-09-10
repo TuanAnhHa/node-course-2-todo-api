@@ -34,7 +34,7 @@ app.get('/todos/:id', (req, res) => {
             res.status(400).send();
         });
     }
-})
+});
 
 app.post('/todos', (req, res) => {
     // console.log(req.body);
@@ -55,4 +55,4 @@ app.listen(3000, () => {
 
 module.exports = {
     app
-}
+};
